@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Blog from "../components/Blog.astro";
+---
+
+<Layout title="博客">
+    <h1>博客</h1>
+    <div class="col">
+        <Blog
+            href="https://weibo.com/u/6389970928"
+            imgUrl="../../static/images/blog01.jpg"
+        />
+        <Blog
+            href="https://weibo.com/u/6389970928"
+            imgUrl="../../static/images/blog02.jpg"
+        />
+    </div>
+</Layout>
+<style>
+    h1 {
+        font-size: 2em;
+        text-align: center;
+        color: #87ceeb;
+    }
+    .col {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+</style>

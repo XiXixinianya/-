@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import MyDetail from "../../components/Detail/index.astro";
+
+export function getStaticPaths() {
+    return [
+        { params: { detail: "魔道祖师" } },
+        { params: { detail: "默读" } },
+        { params: { detail: "某某" } },
+        { params: { detail: "撒野" } },
+        { params: { detail: "杀破狼" } },
+        { params: { detail: "天官赐福" } },
+        { params: { detail: "伪装学渣" } },
+        { params: { detail: "小蘑菇" } },
+    ];
+}
+// 路由参数
+const { detail } = Astro.params;
+---
+
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <title>人设图详情</title>
+    </head>
+    <body>
+        <Layout title="人设图详情">
+            <MyDetail title={detail} />
+        </Layout>
+    </body>
+</html>
